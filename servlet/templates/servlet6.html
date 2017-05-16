@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+  <h1>Cadastro de Pessoas</h1>
+  <a href="{% url 'servlet7' %}">Listar Pessoas</a>
+  {{ message }}<br /><br />
+  <form action="" method="post">
+    {% csrf_token %}
+    <!-- Corpo do formulário... -->
+    {{ form.as_p }}
+    <input type="submit" value="Enviar" />
+  </form>
+</center>
+{% endblock %}

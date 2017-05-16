@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+Olá! Para acessar nosso conteúdo, você precisa ser maior de idade.<br />
+<form action="" method="post">
+  {% csrf_token %}
+  <!-- Corpo do formulário... -->
+  Seu nome: <input type="text" name="nome" /><br />
+  Sua idade: <input type="text" name="idade" size="2" maxlength="2" /><br />
+  <input type="submit" value="Enviar" />
+</form>
+{% endblock %}

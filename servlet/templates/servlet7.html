@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+  <h1>Lista de Pessoas</h1>
+  <a href="{% url 'servlet6' %}">Cadastrar Pessoa</a>
+  <table border="1">
+    <thead>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Idade</th>
+    </thead>
+
+    <tbody>
+      {% for pessoa in object_list %}
+      <tr>
+        <td>{{ pessoa.nome }}</td>
+        <td>{{ pessoa.email }}</td>
+        <td>{{ pessoa.idade }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+</center>
+{% endblock %}
